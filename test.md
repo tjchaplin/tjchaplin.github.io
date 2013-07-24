@@ -6,10 +6,10 @@ title: Blogging Like a Hacker
 
 ##Markdown
 
-{% highlight javascript %}
+```javascript
 
 function(){
 	return 1;
 }
 
-{% endhighlight %}
+```
