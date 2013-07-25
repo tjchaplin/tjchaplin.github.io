@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tim Chaplin
+subtitle: Page1
 ---
 #My GitHub Page
 
@@ -13,3 +14,9 @@ function(){
 }
 
 ```
+
+    function(){
+    	return 2;
+    }
+
+See my [Test]({{ site.url }}/test.html) page for details.
