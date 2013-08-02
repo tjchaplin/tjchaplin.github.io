@@ -4,13 +4,13 @@ published: true
 
 # Github Pages
 
-This is my first post using Github pages and Prose(http://prose.io/).  Below are some quick notes on how to get this going.
+This is my first post using Github pages and Prose [Prose](http://prose.io/ "Prose").  Below are some quick notes on how to get this going.
 
 # Getting Started with Github Pages
 
-First off checkout the documentation from Github:(https://help.github.com/categories/20/articles).  Github uses Jekyll to generate html based on templates.  Jekyll uses the Liquid template engine.  This means you will have to be familiar with the liquid template syntax if you want to use some advanced features.
+First off checkout the [documentation from Github]( https://help.github.com/categories/20/articles "Documentation").  Github uses Jekyll to generate html based on templates.  Jekyll uses the Liquid template engine.  This means you will have to be familiar with the liquid template syntax if you want to use some advanced features.
 
-The easist way to get started is to Fork this repository(https://github.com/tjchaplin/tjchaplin.github.io) into your own repository named: "YOUR-USER-NAME.github.io".  It has a barebones strucutre for using github pages as a blog.  If you do this you won't need to install Jekyll on your own machine to get going.
+The easist way to get started is to [Fork this repository](https://github.com/tjchaplin/tjchaplin.github.io "My Github Page") into your own repository named: "YOUR-USER-NAME.github.io".  It has a barebones strucutre for using github pages as a blog.  If you do this you won't need to install Jekyll on your own machine to get going.
 
 Then without understanding anymore about Jekyll or Liquid you can begin easily posting Markdown style blog posts with Prose.
 
@@ -32,6 +32,3 @@ Once you select your Github pages repository("YOUR-USER-NAME.github.io") Prose w
 # Get going now
 
 Markdown is a super quick way to get going with blogging and publishing content.  Give it a try now.
-
-
-
