@@ -14,7 +14,9 @@ published: true
 		      <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
 		    {% endif %}
 		    <li>
-			    <a class='item' href='#{{item.title}}'>{{item.title}} <span class='date'>-{{item.date | date:"%b %d"}}</span></a>
+			    <a class='item' href='#{{item.title}}'>{{item.title}} 
+			    	<span class='date'> ({{item.date | date:"%b %d"}}) </span>
+			    </a>
 			</li>
 	  {% endfor %}
 	</ul>
