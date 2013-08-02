@@ -1,0 +1,30 @@
+---
+layout: default
+title: Tim Chaplin
+subtitle: Page1
+published: true
+---
+
+<div class='listing col6 pad4h margin3' style="float:left;width:20%;">
+	<ul>
+	  {% for item in site.posts limit:1000 %}
+	    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
+	    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
+		    {% if date != ndate %}
+		      <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
+		    {% endif %}
+		    <li>
+			    <a class='item' href='#{{item.title}}'>{{item.title}} <span class='date'>-{{item.date | date:"%b %d"}}</span></a>
+			</li>
+	  {% endfor %}
+	</ul>
+</div>
+<div style="float:left;width:80%;">
+
+	  {% for item in site.posts limit:1000 %}
+	  	<h1><a id="{{item.title}}">{{item.title}}</a></h1>
+	  	{{item.content}}
+	  {% endfor %}
+</div>
+
+{% include rss-link.html %}

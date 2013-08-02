@@ -1,5 +1,6 @@
 ---
-published: false
+published: true
+section: blog
 ---
 
 ## A New Post
