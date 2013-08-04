@@ -5,9 +5,17 @@
 
   <body>
 
-  {% include header.html %}
+    {% include header.html %}
 
-  {{content}}
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+          <section id="main_content" style="padding:10px;">
+    		    {{content}}
+          </section>
+        </section>
+    </div>
+
 
   {% include footer.html %}
     

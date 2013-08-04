@@ -1,13 +1,12 @@
 ---
 layout: default
 title: Tim Chaplin
-subtitle: Page1
+subtitle: Tim Chaplin
 published: true
 ---
-
-<div style="float:left;" id="main_content_wrap" class='outer'>
-	<div style="float:left;padding:10px;" id="main_content_wrap" class='inner'>
-		<div style="float:left;width:20%;">
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4">
 			<ul>
 			  {% for item in site.posts limit:1000 %}
 			    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
@@ -21,13 +20,12 @@ published: true
 			  {% endfor %}
 			</ul>
 		</div>
-		<div style="float:left;width:80%;">
-			<div style="margin:15px;">
+		<div class="span8">
+
 			  {% for item in site.posts limit:1000 %}
 			  	<h1><a id="{{item.title}}">{{item.title}}</a></h1>
 			  	{{item.content}}
 			  {% endfor %}
-			</div>
 		</div>
 	</div>
 </div>
