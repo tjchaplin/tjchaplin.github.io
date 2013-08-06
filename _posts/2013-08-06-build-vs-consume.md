@@ -4,15 +4,15 @@ published: true
 
 #Build vs Consume
 
-Recently when working on [Scarlet](http://www.scarletjs.com/), I came across an issue in which I had to choose between using an existing framework or creating my own function to do the samething.  This is an issue developers often face.  
+Recently when working on [Scarlet](http://www.scarletjs.com/), I came across an issue in which I had to choose between using an existing framework or creating my own function to do the samething. 
 
 Here are my findings:
 
 ##The Problem
 
-When method is called:
+When method X is called:
 
-1. Create a new object with and instance variable and the paramaters
+1. Create a new object with an instance variable and the method paramaters
 2. Given a list of methods, call each of them in sequence with the new object
 3. Once all are complete call a final method
 
