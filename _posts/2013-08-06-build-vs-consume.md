@@ -42,8 +42,9 @@ function someApi(instance){
 ##First Choice - Consume
 
 Instead of reinventing the wheel I knew of several **Sequence** methods that exist in other frameworks.  Here are a few:
-* [async](https://github.com/caolan/async)
-* [chainsaw](https://github.com/substack/node-chainsaw)
+
+- [async](https://github.com/caolan/async)
+- [chainsaw](https://github.com/substack/node-chainsaw)
 
 As I have used async before, I decided to go with that.
 
