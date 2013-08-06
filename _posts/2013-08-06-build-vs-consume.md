@@ -2,7 +2,7 @@
 published: true
 ---
 
-#Build vs Consume
+##Build vs Consume
 
 Recently when working on [Scarlet](http://www.scarletjs.com/), I came across an issue in which I had to choose between using an existing framework or creating my own function to do the samething. 
 
