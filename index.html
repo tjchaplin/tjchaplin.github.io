@@ -23,8 +23,10 @@ published: true
 		<div class="span8">
 
 			  {% for item in site.posts limit:1000 %}
-			  	<h1><a id="{{item.title}}">{{item.title}}</a></h1>
-			  	{{item.content}}
+			  	<div style="margin-bottom:15px;">
+				  	<h1 style="text-align:center;margin-bottom:15px;"><a id="{{item.title}}">{{item.title}}</a></h1>
+				  	{{item.content}}
+			  	</div>
 			  {% endfor %}
 		</div>
 	</div>
