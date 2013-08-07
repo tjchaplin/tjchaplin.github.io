@@ -2,7 +2,6 @@
 published: true
 ---
 
-
 Recently when working on [Scarlet](http://www.scarletjs.com/), I came across an issue in which I had to choose between using an existing framework or creating my own function to do the samething. 
 
 Here are my findings:
@@ -88,7 +87,7 @@ Overall for the change I needed this was relatively straight forward.
 - Performance
 - Project bloat
 
-The **cons** are relative to [scarlet]('www.scarletjs.com') and the implemenation I was developing.  A large part of the project is focused on creating a low level base framework that is quite performant.  
+The **cons** are relative to [scarlet](http://www.scarletjs.com) and the implemenation I was developing.  A large part of the project is focused on creating a low level base framework that is quite performant.  
 
 ##Second Choice - Build
 
