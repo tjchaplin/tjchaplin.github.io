@@ -1,8 +1,8 @@
 ---
-published: false
+published: true
 ---
 
-# Important Mongo Queries
+# Mongo Queries Reference
 
 ## Find Inner Documents
 
