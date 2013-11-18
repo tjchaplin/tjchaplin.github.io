@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## Purpose
@@ -67,4 +67,3 @@ rebar generate
 .\rel\poke\bin\poke console
 % This will spin up a new console and run your release
 ```
-
