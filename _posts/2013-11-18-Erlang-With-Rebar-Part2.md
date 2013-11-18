@@ -10,7 +10,7 @@ Part 1 described how to setup a new application and release with rebar.  This Pa
 
 1. Create a new module using the behaviour(gen_server)
 
-```
+```erlang
 -module(poke_server).
 -behaviour (gen_server).
 
@@ -42,7 +42,7 @@ code_change(OldVsn, State, Extra) ->
 2. Update to include functionality to handle *poke* and to get *numberOfPokes*.
 Note: I have also cleaned up the code to remove unused variables
 
-```
+```erlang
 -module(poke_server).
 -behaviour (gen_server).
 
@@ -102,7 +102,7 @@ The supervisor was created as part of the rebar template and uses the standard n
 Edit the poke_sup.erl supervisor to start up the new poke server(poke_server.erl).  Here is how the supervisor needs to be updated
 From:
 
-```
+```erlang
 -module(poke_sup).
 
 -behaviour(supervisor).
@@ -133,7 +133,7 @@ init([]) ->
 ```
 To:
 
-```
+```erlang
 -module(poke_sup).
 
 -behaviour(supervisor).
@@ -164,10 +164,12 @@ init([]) ->
 
 ```
 5. Recompile and generate the release
+
 ```
 rebar compile generate
 ```
 6. Now run the application in a console
+
 ```
 .\rel\poke\bin\poke console
 %-> In the erlang console you can use the poke_server like:
@@ -186,6 +188,7 @@ Now that we have a server responding to requests on a single process we can move
   - When you run *.\rel\poke\bin\poke console* this runs the script *.\rel\poke\bin\poke.cmd*
   	- To see the command that gets executed go into the poke.cmd and see what gets run
   - When sending the console command to your release it executes the following:
+  
   ```
   @start "%node_name% console" %werl% -boot "%node_boot_script%" -config "%sys_config%" -args_file "%vm_args%" -sname %node_name%
   ```
@@ -195,14 +198,17 @@ Now that we have a server responding to requests on a single process we can move
 Now that you know where to find the information that rebar creates for you we can create a distributed app
 
 1. Start up the application 
+
 ```
 .\rel\poke\bin\poke console
 ```
 2. Open up another command with an erlang process
+
 ```
 erl -sname poke_client -setcookie poke
 ```
 3. Now type in the following to send a command to your other process
+
 ```
 % rpc:call(%host%,%module%,%method%,%args%)
 rpc:call('poke@localhost',poke_server,poke,[]).
