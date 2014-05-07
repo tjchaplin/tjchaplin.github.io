@@ -32,7 +32,6 @@ A couple of points I well take with me are:
     * E Elaboration - Elaborate with the reasons, data, criteria, explanations, or whatever supports your summary
     * E Example - Provide an illustration or anecdote to connect emotionally and make your response memorable. The more concreate and specific, the better
     * R Restatement Restate your answer in a sentence
-    asf
 
 And the last thing I will takeaway is the name of the authors firm...booher...booher! Now I am promoting her I.  I guess her subliminal messages worked.
 
