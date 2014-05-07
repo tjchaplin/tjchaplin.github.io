@@ -60,11 +60,11 @@ One of the main points from this section is that leaders must`observe`.  One exa
 
 ### Five Aspects that deliver results
 
-1) Standarized work(the form)
-2) Deep observation by the Sensei to guide
-3) No answers to allow the student to learn by struggling
-4) On-the-job development to get practice and feedback
-5) Steadily increasing challenges to grow the student's capability
+1. Standarized work(the form)
+2. Deep observation by the Sensei to guide
+3. No answers to allow the student to learn by struggling
+4. On-the-job development to get practice and feedback
+5. Steadily increasing challenges to grow the student's capability
 
 ## Plan Do Check Act(PDCA)
 
@@ -76,14 +76,14 @@ One of the main points from this section is that leaders must`observe`.  One exa
 
 PDCA directly relates to the Toyota Business Process(TBP):
 
-1) Define the problem relative to the ideal(plan)
-2) Break down the problem into manageable pieces (plan).
-3) Identify the root cause (plan)
-4) Set a target for improvement (plan).
-5) Select the appropriate solution among several alternatives (plan).
-6) Implement the solution (do)
-7) Check impact (check)
-8) Adjust, standardize, and spread (act).
+1. Define the problem relative to the ideal(plan)
+2. Break down the problem into manageable pieces (plan).
+3. Identify the root cause (plan)
+4. Set a target for improvement (plan).
+5. Select the appropriate solution among several alternatives (plan).
+6. Implement the solution (do)
+7. Check impact (check)
+8. Adjust, standardize, and spread (act).
 
 
 ## Quotes
