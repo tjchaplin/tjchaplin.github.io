@@ -1,0 +1,20 @@
+{
+  "name": "tjchaplin.github.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tjchaplin/tjchaplin.github.io",
+  "authors": [
+    "tjchaplin <tjchaplin@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "highlightjs": "~8.4.0",
+    "bootstrap": "~3.3.2"
+  }
+}
