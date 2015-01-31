@@ -1,6 +1,12 @@
 ---
+layout: post
 published: true
 ---
+
+# Leading at a higher level
+
+This is my review of:
+>  Ken Blanchard on Leadership and Creating High Performing Organizations
 
 # Seletion
 

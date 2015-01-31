@@ -1,6 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+			<div class="date">
+				{{ site.time | date_to_long_string }}
+			</div>
             <section>
                 {{ content }}
             </section>
