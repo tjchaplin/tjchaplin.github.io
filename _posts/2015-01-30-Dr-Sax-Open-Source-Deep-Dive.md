@@ -1,4 +1,5 @@
 ---
+layout: post
 published: true
 ---
 # An Open Source Deep Dive with Dr. SAX
@@ -20,8 +21,11 @@ npm install dr-sax
 Dr. Sax is written by:
 
 ![Todd Kennedy](https://avatars2.githubusercontent.com/u/193412?v=3&s=75)
+
 [Todd Kennedy](https://github.com/toddself) 
+
 [@whale_eat_squid](https://twitter.com/whale_eat_squid)
+
 [Blog](https://tck.io/)
 
 I would recomend installing it and having a look next time you need to convert html to Markdown.
@@ -40,7 +44,8 @@ Dr. Sax does a couple of things worth reviewing:
 Dr. Sax comes with a straight forward way for converting html to markdown.  The project utilizes node's core with streams, but also shows how the tool can be used without it.  Having a simple API that can be used with and without streams opens the door for more users, because streams can be a little scary if you're just getting going with Node.  Here is a sample of the API:
 
 No Streams
-```
+
+```javascript
 var DrSax = require('dr-sax');
 var drsax = new DrSax();
 drsax.write('<h1>A header </h1>');
@@ -49,7 +54,7 @@ drsax.write('<h1>A header </h1>');
 
 With Streams
 
-```
+```javascript
 var drSax = require('dr-sax').stream();
 fs.createReadStream('header.html').pipe(drSax).pipe(process.stdout));
 ```
@@ -72,19 +77,20 @@ As this is a project about Markdown, the project has choosen to run tests using 
 
 In javascript you don't always have to call `new` to create a new object.  Dr. SAX uses a cool trick that I see often.  In some cases when pulling in a project you may have to do the following to use a module:
 
-```
+```javascript
 var SomeThing = require('someThing');
 var someThing = new SomeThing();
 ```
+
 The above makes sense in certain cases but other times I don't want to have to write another line of code, I am lazy!  From a user perspective you just want to do the following:
 
-```
+```javascript
 var someThing = require('someThing');
 ```
 
 You can do this in several ways, but I like the following:
 
-```
+```javascript
 'use strict'
 
 module.exports = function SomeThing(){
@@ -102,7 +108,7 @@ The above simply checks if this is an instance of the object.  If not it creates
 
 As with any code there is always room for improvement.  The main call out that could use some reworking is the fact that with the streams implementation the author is buffering the whole string.  With streams the intention is to process the data as it comes in, as oppossed to in one big chunk.  Here is what I mean:
 
-```
+```javascript
 //Buffering of string
 StreamingDrSax.prototype._transform = function(chunk, enc, cb){
   this._htmlString += chunk.toString();
