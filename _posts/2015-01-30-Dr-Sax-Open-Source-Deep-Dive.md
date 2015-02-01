@@ -61,7 +61,7 @@ fs.createReadStream('header.html').pipe(drSax).pipe(process.stdout));
 
 ## Benchmarks
 
-Todd created some benchmarks tests to compare his solution with others*.  I think it is awesome when developers take time to compare their products to others.  It is not so much about why this product is better, but it shows that the developer really cares about their product.  They care so much that they research other solutions and see where their product stands to others.  It is interesting to note that Dr. SAX is actually the **2nd** fastest.
+Todd created some benchmarks tests to compare his solution with others.  I think it is awesome when developers take time to compare their products to others.  It is not so much about why this product is better, but it shows that the developer really cares about their product.  They care so much that they research other solutions and see where their product stands to others.  It is interesting to note that Dr. SAX is actually the **2nd** fastest.
 
 The tool used for benchmarking is [Benchmark](https://github.com/bestiejs/benchmark.js) by [John Dalton](https://github.com/jdalton).  It is also worth taking a look at when benchmarking your next project.
 
