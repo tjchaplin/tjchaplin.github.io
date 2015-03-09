@@ -8,17 +8,17 @@ published: true
 
 This addition of *The Erlang Diaries* discusses simple unit testing with rebar and eunit.  Testing is fundamental to any development project.  Erlang provides `eunit` to perform unit testing.  
 
-## Warming Up
+## Getting Started
 
-You will need Erlang, if you don't already have it installed.  You can find the latest installations and instructions on the [Erlang website](http://www.erlang.org/download.html).
+I hope by reading this you already have Erlang installed, but if not you can find the latest installations and instructions on the [Erlang website](http://www.erlang.org/download.html).
 
-You will also need `rebar` and an initial rebar project.  You can initialize the project as follows:
+You will also need `rebar` and an initial rebar project.  You can initialize a project with the following command:
 
 ```
 $ rebar create-app appid=poke
 ```
 
-For more information on how to install and setup a project in rebar check out this [Diary entry](http://tjchaplin.github.io/2015/03/05/The-Erlang-Diaries---Installing-rebar.html).
+For more information on how to install and setup a project in rebar check out this [diary entry](http://tjchaplin.github.io/2015/03/05/The-Erlang-Diaries---Installing-rebar.html).
 
 ## Testing First
 
@@ -27,14 +27,14 @@ For more information on how to install and setup a project in rebar check out th
 	```
 	$ mkdir test; mkdir test/unit
 	```
-2. Create a basic test file in `test/unit/poker_tests.erl`:
+2. Create a basic test file (`test/unit/poker_tests.erl`) with the following contents:
 
 	```erl
 	-module(poker_tests).
 	
 	-include_lib("eunit/include/eunit.hrl").
 	```
-3. Create an assertion to confirm: `when you call poke the response is hehe`:
+3. Create an assertion to confirm a poke response: `when you call poke the response is hehe`:
 	
 	```erl
 	when_calling_poke_should_respond_hehe_test() ->
@@ -42,7 +42,7 @@ For more information on how to install and setup a project in rebar check out th
 		?assert(Result == <<"hehe">>).
 	```
 
-Now that the test has been written, it is time to make it pass.
+Now you have a failing test!  Go on to the next step and make it pass.
 
 ## Making it pass
 
@@ -97,13 +97,10 @@ Now that the test has been written, it is time to make it pass.
 
 ## Making it better
 
-The common tasks of:
-* Clean tests
-* Recompile
-* Run Tests
+The build tasks needed to be wrapped up, so that we don't have to repeat ourselves each test run.  The best way to do 
+this is to use a `Makefile`.
 
-Need to be wrapped up into a build step.  The most common way to do 
-this with Erlang is to use a Makefile.  Here is a sample Makefile to accomplish the testing tasks:
+Here is a Makefile to accomplish the testing tasks:
 
 ```makefile
 REBAR=rebar
@@ -121,7 +118,7 @@ clean:
 	@$(REBAR) clean
 ``` 
 
-Now to run the tests we simply use make:
+To run the tests simply use make:
 
 ```
 $ make test
@@ -132,15 +129,21 @@ $ make test
 ## A Couple of Notes
 * test modules must have suffix of `tests`; ie. myfile_tests
 * Each unit test within a test file must have a suffix of `test`
-	* When_Something_Should_Do_Something_test() -> 
-* When running tests it is best to do so with `skip_deps=true`
-	* This prevents dependent module tests from also being run
-
+	
+	```erl
+	When_Something_Should_Do_Something_test() -> 
+		blah.
+	```
+* When running tests it is best to skip dependencies, so that dependent module tests don't get run.  Use the following command to only run test within your project:
+	
+	```
+	$ rebar skip_deps=true eunit
+	```
+	
 ## Review
 
-With the above example you should feel at home with testing.  It is not very different from other testing frameworks.  Using rebar the compilation and running of the tests is taken care of with a single command `rebar skip_deps=true eunit`.
+With the above example you should feel at home with testing.  It is not very different from other testing frameworks.  Rebar makes compiling and running the tests dead simple.  The nuances with testing are to do with the naming of the test module and test entries.
 
-Setting up and tearing down tests will be discussed in later.
 
 ## See Also
 
