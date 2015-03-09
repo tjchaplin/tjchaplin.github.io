@@ -23,26 +23,24 @@ For more information on how to install and setup a project in rebar check out th
 ## Testing First
 
 1. Create a directory to hold the unit tests(test/unit):
-
-```
-$ mkdir test; mkdir test/unit
-```
-
+	
+	```
+	$ mkdir test; mkdir test/unit
+	```
 2. Create a basic test file in `test/unit/poker_tests.erl`:
 
-```erl
--module(poker_tests).
-
--include_lib("eunit/include/eunit.hrl").
-```
-
+	```erl
+	-module(poker_tests).
+	
+	-include_lib("eunit/include/eunit.hrl").
+	```
 3. Create an assertion to confirm: `when you call poke the response is hehe`:
-
-```erl
-when_calling_poke_should_respond_hehe_test() ->
-	Result = poker:poke(),
-	?assert(Result == <<"hehe">>).
-```
+	
+	```erl
+	when_calling_poke_should_respond_hehe_test() ->
+		Result = poker:poke(),
+		?assert(Result == <<"hehe">>).
+	```
 
 Now that te test has been written, it is time to make it pass.
 
@@ -50,59 +48,52 @@ Now that te test has been written, it is time to make it pass.
 
 1. Run the test with rebar
 
-```
-$rebar eunit
-> poker_tests: when_calling_poke_should_respond_hehe_test (module 'poker_tests')...*failed*
-```
-
+	```
+	$rebar eunit
+	> poker_tests: when_calling_poke_should_respond_hehe_test (module 'poker_tests')...*failed*
+	```
 2. Add missing object by creating a new poker module named poker.erl
 
-```erl
--module(poker).
-```
-
+	```erl
+	-module(poker).
+	```
 3. Add a function called poke
 
-```erl
--module(poker).
-
-poke() ->
-	<<"hehe">>.
-```
-
+	```erl
+	-module(poker).
+	
+	poke() ->
+		<<"hehe">>.
+	```
 4. Export the function
 
-```erl
--module(poker).
--export([poke/0]).
-
-poke() ->
-	<<"hehe">>.
-```
-
+	```erl
+	-module(poker).
+	-export([poke/0]).
+	
+	poke() ->
+		<<"hehe">>.
+	```
 5. Compile 
-
-```
-$ rebar compile
-```
-
+	
+	```
+	$ rebar compile
+	```
 6. Remove old tests
 
-```
-$ rm -rf .eunit
-```
-
+	```
+	$ rm -rf .eunit
+	```
 7. Rerun the tests
 
-```
-$ rebar eunit
-> Compiled src/poke_sup.erl
-> Compiled src/poke_app.erl
-> Compiled src/poker.erl
-> Compiled test/unit/poker_tests.erl
->	Test Passed.
-```
-
+	```
+	$ rebar eunit
+	> Compiled src/poke_sup.erl
+	> Compiled src/poke_app.erl
+	> Compiled src/poker.erl
+	> Compiled test/unit/poker_tests.erl
+	>	Test Passed.
+	```
 ## Making it better
 
 The common tasks of:
@@ -113,7 +104,7 @@ The common tasks of:
 Need to be wrapped up into a build step.  The most common way to do 
 this with Erlang is to use a Makefile.  Here is a sample Makefile to accomplish the testing tasks:
 
-```
+```makefile
 REBAR=rebar
 
 .PHONY: compile test clean
