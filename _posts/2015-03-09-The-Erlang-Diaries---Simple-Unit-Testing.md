@@ -2,7 +2,7 @@
 layout: post
 published: true
 ---
-# The Erlang Diaries - Simple Unit Testing `rebar`
+# The Erlang Diaries - Simple Unit Testing
 
 ## Purpose
 
@@ -42,7 +42,7 @@ For more information on how to install and setup a project in rebar check out th
 		?assert(Result == <<"hehe">>).
 	```
 
-Now that te test has been written, it is time to make it pass.
+Now that the test has been written, it is time to make it pass.
 
 ## Making it pass
 
@@ -94,6 +94,7 @@ Now that te test has been written, it is time to make it pass.
 	> Compiled test/unit/poker_tests.erl
 	>	Test Passed.
 	```
+
 ## Making it better
 
 The common tasks of:
