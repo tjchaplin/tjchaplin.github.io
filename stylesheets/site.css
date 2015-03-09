@@ -35,3 +35,7 @@ footer {
 .date {
 	font-size:.75em
 }
+
+.thumbnail .caption{
+	min-height:80px;	
+}
