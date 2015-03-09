@@ -1,4 +1,5 @@
 ---
+layout: post
 published: true
 ---
 # The Erlang Diaries - Installing and creating a project with `rebar`
@@ -26,18 +27,25 @@ EShell V6.3
 ## Installing Rebar
 
 1. Clone Rebar Github repository
+
 ```
 git clone git://github.com/rebar/rebar.git
 ```
+
 2. Build it
+
 ```
 ./bootstrap
 ```
+
 3. Add rebar to your path
+
 ```
 ~/rebar
 ```
+
 4. Open a new console window and confirm rebar
+
 ```
 $ rebar
 ```
@@ -45,19 +53,23 @@ $ rebar
 ## Creating an application with Rebar
 
 1. Create a new application using the default rebar template
+
 ```
 $rebar create-app appid=poke
 > writing src/poke.app.src
 > writing src/poke_app.erl
 > writing src/poke_sup.erl
 ```
+
 2. Compile the new application
+
 ```
 $ rebar compile
 > ==> (compile)
 > compiled src/poke_app.erl
 > compiled src/poke_sup.erl
 ```
+
 ## Review
 
 Rebar standarizes the creation of Erlang projects.  Out of the box, you can easily get going with your next awesomeo application! You don't have to think about the basics, and can get going with your implementation.
