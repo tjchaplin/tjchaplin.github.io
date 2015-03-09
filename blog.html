@@ -1,0 +1,28 @@
+---
+layout: default
+title: Tim Chaplin
+subtitle: Tim Chaplin
+published: true
+---
+
+<!-- MAIN CONTENT -->    
+<div class="container">
+  <div class="row">
+    <div class="row">
+        {% for item in site.posts limit:1000 %}
+            {% assign itemImage = item.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html','.png' %}
+            <div class="col-sm-6 col-md-4">
+              <a title="{{item.title}}" href="{{ item.url }}">
+                <div class="thumbnail">
+                  <img class="img-responsive center-block" alt="{{item.title}}" src="/images/{{itemImage}}">
+                  <div class="caption">
+                    <h5 class="text-center">{{item.title}}</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+        {% endfor %}
+      </div>
+  </div>
+</div>

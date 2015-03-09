@@ -1,5 +1,6 @@
 ---
-published: false
+layout: post
+published: true
 ---
 
 Using the shell/terminal is faster than selecting, right clicking, and using tools like [tourtise git](https://code.google.com/p/tortoisegit/).

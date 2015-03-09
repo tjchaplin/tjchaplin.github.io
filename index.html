@@ -4,30 +4,7 @@ title: Tim Chaplin
 subtitle: Tim Chaplin
 published: true
 ---
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span4">
-			<ul>
-			  {% for item in site.posts limit:1000 %}
-			    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
-			    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
-				    {% if date != ndate %}
-				      <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
-				    {% endif %}
-				    <li>
-					    <a class='item' href='#{{item.title}}'>{{item.title}}</a>
-					</li>
-			  {% endfor %}
-			</ul>
-		</div>
-		<div class="span8">
 
-			  {% for item in site.posts limit:1000 %}
-			  	<div style="margin-bottom:15px;">
-				  	<h1 style="text-align:center;margin-bottom:15px;"><a id="{{item.title}}">{{item.title}}</a></h1>
-				  	{{item.content}}
-			  	</div>
-			  {% endfor %}
-		</div>
-	</div>
-</div>
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
+{% include post_detail.html %}
