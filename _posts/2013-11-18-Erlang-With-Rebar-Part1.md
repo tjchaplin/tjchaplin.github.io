@@ -5,7 +5,10 @@ published: true
 ## Purpose
 After starting out with the basics of Erlang, through the *Seven Languages In Seven Weeks*, I wanted to explore more of what Erlang has to offer.  The first part of that was looking at setting up an OTP application and structure.  This led me to [rebar](https://github.com/rebar/)
 
-Rebar describes itself as follows: `Erlang build tool that makes it easy to compile and test Erlang applications, port drivers and releases.`  That sums it up nicely.  Below is how to get the template application running
+Rebar describes itself as follows:
+> Erlang build tool that makes it easy to compile and test Erlang applications, port drivers and releases.
+
+That sums it up nicely.  Below is how to get the template application running
 
 # The Code
 
@@ -54,7 +57,7 @@ From:
 
 ```
 {sys, [
-		...
+		%...
        {app, poke, [{mod_cond, app}, {incl_cond, include}]}
       ]}.
 ```
@@ -62,7 +65,7 @@ To:
 
 ```
 {sys, [
-		...
+		%...
        {app, poke, [{mod_cond, app}, {incl_cond, include}, {lib_dir, ".."}]}
       ]}.
 ```
@@ -78,3 +81,5 @@ rebar generate
 .\rel\poke\bin\poke console
 % This will spin up a new console and run your release
 ```
+# How it works
+
